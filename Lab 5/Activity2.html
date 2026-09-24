@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab 5 - Activity 2</title>
+</head>
+<body>
+<h2>Activity 2: Question and Answer</h2>
+<p id="result"></p>
+
+<script>
+function askQuestion() {
+  var answer = prompt("What is the capital of Pakistan?");
+
+  if (answer !== null && answer.toLowerCase().trim() === "islamabad") {
+    document.getElementById("result").innerHTML = "Success! Your answer is correct.";
+  } else {
+    document.getElementById("result").innerHTML = "Error! Your answer is wrong.";
+  }
+}
+
+askQuestion();
+</script>
+</body>
+</html>

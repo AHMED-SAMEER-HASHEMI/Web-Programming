@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using If condition</title>
+    <script>
+    function playGame() {
+        var res = Math.round(Math.random() * 10);
+        var num = prompt("Please enter a number", 0);
+        
+        if (num == res) {
+            document.write("You Won");
+        } else {
+            document.write("You lost, correct Answer is " + res);
+        }
+    }
+    </script>
+</head>
+<body>
+
+<p onclick="playGame()" style="cursor: pointer;">Play the Game</p>
+
+</body>
+</html>
