@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riphah University - Media Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef8fa, #dceff3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7B1E3A, #9e3154);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            width: 90%;
+            margin: -20px auto 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #155E75;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #7B1E3A;
+            color: white;
+        }
+
+        /* Main */
+        main {
+            width: 85%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+
+        /* Media Card */
+        .media-card {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-top: 6px solid #7B1E3A;
+        }
+
+        .media-card h2 {
+            color: #7B1E3A;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 50%;
+            padding: 10px;
+            background: white;
+            border: 5px solid #155E75;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 25px;
+        }
+
+        /* Introduction */
+        .intro {
+            margin-bottom: 30px;
+        }
+
+        .intro h3 {
+            color: #7B1E3A;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* YouTube Section */
+        .youtube-section {
+            background: #f5fafb;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .youtube-section h2 {
+            color: #7B1E3A;
+            margin-bottom: 10px;
+        }
+
+        .youtube-section p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Video */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 390px;
+            border: none;
+            display: block;
+        }
+
+        /* Library Button */
+        .library-btn {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #155E75;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .library-btn:hover {
+            background-color: #7B1E3A;
+            transform: translateY(-2px);
+        }
+
+        /* Thank You */
+        .thank-you {
+            margin-top: 30px;
+            padding: 25px;
+            background: #7B1E3A;
+            color: white;
+            border-radius: 15px;
+        }
+
+        .thank-you h3 {
+            font-size: 22px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #7B1E3A;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                width: 94%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 11px;
+            }
+
+            main {
+                width: 92%;
+            }
+
+            .media-card {
+                padding: 25px 18px;
+            }
+
+            .logo {
+                width: 160px;
+                height: 160px;
+            }
+
+            .video-container iframe {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Riphah International University</h1>
+        <p>Islamabad Campus • Media Center</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dep.html">Department</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="lib.html">Library</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="media-card">
+
+            <h2>🎬 Media Page</h2>
+
+            <!-- University Logo -->
+            <img
+                class="logo"
+                src="https://www.developmentaid.org/files/organizationLogos/riphah-international-university-269916.jpg"
+                alt="Riphah International University Logo"
+            >
+
+            <!-- Introduction -->
+            <div class="intro">
+                <h3>Welcome to the Riphah University Media Page</h3>
+
+                <p>
+                    Here you can find media and videos related to
+                    Riphah International University.
+                </p>
+            </div>
+
+            <!-- YouTube -->
+            <div class="youtube-section">
+
+                <h2>▶ YouTube</h2>
+
+                <p>
+                    Watch a video related to Riphah International University:
+                </p>
+
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/zgNSIyqG2SA"
+                        title="Riphah International University YouTube Video"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+            <!-- Library -->
+            <a href="lib.html" class="library-btn">
+                📚 Visit Library →
+            </a>
+
+            <!-- Thank You -->
+            <div class="thank-you">
+                <h3>Thank You for Visiting!</h3>
+                <p>We hope you enjoyed exploring our university media.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Riphah International University Islamabad
+            | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+
+</html>

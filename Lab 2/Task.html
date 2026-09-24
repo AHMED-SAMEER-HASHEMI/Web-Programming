@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riphah International University Library</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef8fa, #dceff3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7B1E3A, #9e3154);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            width: 90%;
+            margin: -20px auto 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 16px 23px;
+            color: #155E75;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #7B1E3A;
+            color: white;
+        }
+
+        /* Main */
+        main {
+            width: 85%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        /* General Card */
+        .card {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.09);
+            border-left: 5px solid #7B1E3A;
+        }
+
+        .card h2 {
+            color: #7B1E3A;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+
+        .card h3 {
+            color: #155E75;
+            margin: 20px 0 10px;
+            font-size: 21px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+            border-top: 6px solid #7B1E3A;
+            border-left: none;
+        }
+
+        .about h2 {
+            font-size: 30px;
+        }
+
+        /* Media */
+        .media {
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            border-radius: 50%;
+            padding: 10px;
+            border: 5px solid #155E75;
+            margin: 10px 0 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 390px;
+            border: none;
+            display: block;
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        /* Lists */
+        ul,
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            padding: 7px 0;
+            color: #555;
+        }
+
+        li::marker {
+            color: #155E75;
+            font-weight: bold;
+        }
+
+        /* Borrowing */
+        .borrowing li {
+            margin-bottom: 8px;
+        }
+
+        /* Timings */
+        .timing-card {
+            background: #155E75;
+            color: white;
+            border: none;
+            text-align: center;
+        }
+
+        .timing-card h2 {
+            color: white;
+        }
+
+        .timing {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 12px;
+            margin: 8px auto;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        .timing strong {
+            color: #e8f8fa;
+        }
+
+        /* Footer */
+        footer {
+            background: #7B1E3A;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 45px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #d9f4f7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                width: 94%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 11px;
+            }
+
+            main {
+                width: 92%;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .logo {
+                width: 160px;
+                height: 160px;
+            }
+
+            .video-container iframe {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>📚 Riphah International University Library</h1>
+        <p>Gateway to Knowledge • Learning • Islamic Ethical Values</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="Lab2.html">About</a></li>
+            <li><a href="#media">Virtual Tour</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#rules">Borrowing Policy</a></li>
+            <li><a href="#timing">Timings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- About -->
+        <section class="card about" id="about">
+
+            <h2>📖 About the Library</h2>
+
+            <p>
+                The <strong>Riphah International University Library</strong>
+                is dedicated to fostering
+                <b>academic excellence, innovation, and value-based learning.</b>
+                The library provides students with books, journals, and
+                digital resources for their studies and research.
+            </p>
+
+        </section>
+
+
+        <!-- Media -->
+        <section class="card media" id="media">
+
+            <h2>🎬 Media Gallery & Virtual Tour</h2>
+
+            <h3>Main Reading Hall</h3>
+
+            <img
+                class="logo"
+                src="https://www.developmentaid.org/files/organizationLogos/riphah-international-university-269916.jpg"
+                alt="Riphah University Logo"
+            >
+
+            <p>
+                <small>
+                    <i>
+                        Silent study and reading space for students and faculty.
+                    </i>
+                </small>
+            </p>
+
+            <h3>▶ Library Orientation & Virtual Walkthrough</h3>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/zgNSIyqG2SA"
+                    title="Riphah International University Library Video"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p>
+                <small>
+                    <i>
+                        A guided walkthrough of the library and its facilities.
+                    </i>
+                </small>
+            </p>
+
+        </section>
+
+
+        <!-- Services -->
+        <section class="card" id="services">
+
+            <h2>🏫 Sections & Services</h2>
+
+            <h3>Available Facilities</h3>
+
+            <ul>
+                <li>
+                    <strong>Digital Learning Resource Center:</strong>
+                    Research databases and digital resources.
+                </li>
+
+                <li>
+                    <strong>Circulation Counter:</strong>
+                    Book issue, renewal, and return services.
+                </li>
+
+                <li>
+                    <strong>Reference Section:</strong>
+                    Dictionaries, journals, and reference books.
+                </li>
+
+                <li>
+                    <strong>Plagiarism Screening Desk:</strong>
+                    Assistance with research and thesis checking.
+                </li>
+            </ul>
+
+            <h3>📝 Step-by-Step Checkout Process</h3>
+
+            <ol>
+                <li>Search for the required book in the library catalog.</li>
+                <li>Find the book using its shelf number.</li>
+                <li>
+                    Take the book and your valid student card
+                    to the circulation desk.
+                </li>
+                <li>
+                    Collect the book with its due return date.
+                </li>
+            </ol>
+
+        </section>
+
+
+        <!-- Borrowing -->
+        <section class="card borrowing" id="rules">
+
+            <h2>📌 Borrowing Guidelines</h2>
+
+            <ul>
+                <li>
+                    <b>Undergraduate Quota:</b>
+                    Students can borrow up to 4 textbooks for 14 days.
+                </li>
+
+                <li>
+                    <b>Late Penalties:</b>
+                    A fine of <strong>Rs. 10 per day</strong>
+                    is charged for late returns.
+                </li>
+
+                <li>
+                    <b>Restricted Media:</b>
+                    Rare manuscripts, dissertations, and project reports
+                    cannot be borrowed.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- Timings -->
+        <section class="card timing-card" id="timing">
+
+            <h2>🕐 Library Schedule</h2>
+
+            <div class="timing">
+                <strong>Monday - Friday</strong><br>
+                08:00 AM - 08:00 PM
+            </div>
+
+            <div class="timing">
+                <strong>Saturday</strong><br>
+                09:00 AM - 04:00 PM
+            </div>
+
+            <div class="timing">
+                <strong>Sunday</strong><br>
+                Closed
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            <b>© 2026 Riphah International University Library</b>
+        </p>
+
+        <p>
+            Contact:
+            <a href="mailto:library@riphah.edu.pk">
+                library@riphah.edu.pk
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

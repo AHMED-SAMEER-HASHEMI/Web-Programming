@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riphah International University Islamabad</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef8fa, #dceff3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7B1E3A, #9e3154);
+            color: white;
+            padding: 45px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            width: 90%;
+            margin: -20px auto 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #155E75;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #7B1E3A;
+            color: white;
+        }
+
+        /* Main content */
+        main {
+            width: 85%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+
+        .welcome-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid #7B1E3A;
+        }
+
+        .welcome-card h2 {
+            color: #7B1E3A;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .welcome-card p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* Information cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #7B1E3A;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            color: #155E75;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            color: #7B1E3A;
+            text-decoration: underline;
+        }
+
+        /* Quote section */
+        .quote {
+            margin-top: 30px;
+            background: #155E75;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote h3 {
+            margin-bottom: 12px;
+            color: #d9f4f7;
+        }
+
+        .quote q {
+            font-size: 19px;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #7B1E3A;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                width: 94%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 12px;
+            }
+
+            main {
+                width: 92%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Riphah International University</h1>
+        <p>Islamabad Campus</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="dep.html">Department</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Exams</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="welcome-card">
+            <h2>Historic Perspective</h2>
+            <p>
+                Welcome to Riphah International University Islamabad.
+                Explore our departments, academic programs, admissions,
+                examinations, and other important university information.
+            </p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>📚 Department</h3>
+                <p>
+                    Learn more about our departments and academic areas.
+                </p>
+                <br>
+                <a href="dep.html">View Department Information →</a>
+            </div>
+
+            <div class="card">
+                <h3>ℹ️ Other Information</h3>
+                <p>
+                    Find additional information and resources about the university.
+                </p>
+                <br>
+                <a href="lol.html">View Other Information →</a>
+            </div>
+
+        </section>
+
+        <!-- WWF Quote -->
+        <section class="quote">
+            <h3>Our Connection With Nature</h3>
+            <q>
+                Build a future where people live in harmony with nature.
+            </q>
+            <p>— WWF</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Riphah International University Islamabad | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

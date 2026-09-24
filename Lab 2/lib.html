@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riphah Library</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #eef8fa, #dceff3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #7B1E3A, #9e3154);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            width: 90%;
+            margin: -20px auto 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 16px 25px;
+            text-decoration: none;
+            color: #155E75;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #7B1E3A;
+            color: white;
+        }
+
+        /* Main */
+        main {
+            width: 85%;
+            max-width: 1000px;
+            margin: 0 auto 50px;
+        }
+
+        /* Welcome Card */
+        .welcome {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 6px solid #7B1E3A;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            color: #7B1E3A;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .welcome p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* About */
+        .about {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .about h2 {
+            color: #7B1E3A;
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* Cards Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #7B1E3A;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        /* Lists */
+        ul,
+        ol {
+            padding-left: 25px;
+            font-size: 16px;
+        }
+
+        li {
+            padding: 6px 0;
+            color: #555;
+        }
+
+        li::marker {
+            color: #155E75;
+            font-weight: bold;
+        }
+
+        /* Timings */
+        .timings {
+            background: #155E75;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .timings h2 {
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .timings p {
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        /* Home Button */
+        .home-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background-color: #7B1E3A;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background-color: #155E75;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #7B1E3A;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                width: 94%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 11px;
+            }
+
+            main {
+                width: 92%;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome,
+            .about,
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>📚 Riphah Library</h1>
+        <p>Learning • Research • Knowledge</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="Task.html">Home</a></li>
+            <li><a href="dep.html">Department</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Academics</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Welcome -->
+        <section class="welcome">
+            <h2>Welcome to Riphah Library</h2>
+
+            <p>
+                A place dedicated to
+                <b>learning, research, and knowledge.</b>
+            </p>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+            <h2>📖 About Riphah Library</h2>
+
+            <p>
+                Riphah Library provides students with a wide range of
+                <b>books, research materials, and digital resources.</b>
+                It offers a quiet environment for
+                <u>study and learning.</u>
+            </p>
+        </section>
+
+        <!-- Facilities & How to Use -->
+        <section class="grid">
+
+            <div class="card">
+                <h2>🏫 Library Facilities</h2>
+
+                <ul>
+                    <li>Textbooks and reference books</li>
+                    <li>Digital library resources</li>
+                    <li>Reading area</li>
+                    <li>Internet access</li>
+                    <li>Research materials</li>
+                    <li>Quiet study environment</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>📝 How to Use the Library</h2>
+
+                <ol>
+                    <li>Enter the library with your student ID.</li>
+                    <li>Search for the required book.</li>
+                    <li>Check the availability of the book.</li>
+                    <li>Issue the book from the library counter.</li>
+                    <li>Return the book on time.</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <!-- Rules & Timings -->
+        <section class="grid" style="margin-top: 25px;">
+
+            <div class="card">
+                <h2>📌 Library Rules</h2>
+
+                <ul>
+                    <li><b>Maintain silence</b> inside the library.</li>
+                    <li>Keep the books <i>clean and safe.</i></li>
+                    <li>Do not damage library property.</li>
+                    <li>Return books before the <u>due date.</u></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>🕐 Library Timings</h2>
+
+                <p style="font-size: 17px; color: #555;">
+                    <b>Monday - Friday:</b><br>
+                    8:00 AM - 8:00 PM
+                    <br><br>
+
+                    <b>Saturday:</b><br>
+                    9:00 AM - 5:00 PM
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Home Button -->
+        <div style="text-align: center;">
+            <a href="Task.html" class="home-btn">
+                🏠 Back to Home
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Riphah International University Islamabad
+            | All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+
+</html>
